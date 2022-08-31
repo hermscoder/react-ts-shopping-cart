@@ -16,7 +16,7 @@ export const CartItem: React.FC<Props> = ({ id, quantity }: Props) => {
 
     return (
         <Stack direction="horizontal" gap={2} className="d-flex align-items-center">
-            <img src={item.imgUrl} style={{ width: "125px", height: "75px", objectFit: "cover" }} />
+            <img src={item.imgUrl} style={{ width: "125px", height: "75px", objectFit: "cover" }} alt={item.name} />
             <div className="me-auto">
                 <div>
                     { item.name } {" "}
