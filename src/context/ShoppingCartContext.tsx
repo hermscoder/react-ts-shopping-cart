@@ -12,7 +12,7 @@ interface CartItem {
     quantity: number
 }
 
-interface ShoppingCartContext {
+interface ShoppingCartContextProps {
     openCart: () => void
     closeCart: () => void
     getItemQuantity: (id:number) => number,
@@ -23,7 +23,7 @@ interface ShoppingCartContext {
     cartItems: Array<CartItem>
 }
 
-const ShoppingCartContext = createContext({} as ShoppingCartContext)
+const ShoppingCartContext = createContext({} as ShoppingCartContextProps)
 
 export function useShoppingCart() {
     return useContext(ShoppingCartContext)
